@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap');
+
+:root {
+    font-size: 62.5%;
+
+    /* ------------ Typography -------------- */
+    --body-font: 'Poppins', sans-serif;
+    --fsz-normal: 1.6rem;
+    --fsz-large: 1.8rem;
+    --fsz-larger: 1.9rem;
+
+    /* ------------ Pallete ----------------- */
+    --primary-color: #2b72fb;
+
+    --dark-grey: #333333;
+    --medium-grey: #636363;
+    --light-grey: #dfd9d9;
+    --ash: #f4f4f4;
+    --bd: 1px solid var(--light-grey);
+    
+  --shadow: rgba(0, 0, 0, 0.05) 0px 6px 15px 0px,
+  rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--body-font);
+}
+body {
+    margin: 0;
+    font-size: var(--fsz-normal);
+}
+section:not(:nth-child(2)) {
+    margin-top: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h1, h2, h3, h4, h5,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+button,
+input
+{
+    font-family: var(--body-font);
+    font-size: var(--fsz-normal);
+}
+
+/* ------------------ Utility Classes ---------------------- */
+.fx {
+    display: flex;
+    flex-wrap: wrap;
+}
