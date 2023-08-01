@@ -2,6 +2,7 @@ import '../../assets/styles/Navbar.css';
 import '../../assets/styles/style.css';
 import Logo from '../../assets/images/other/logo.png';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 // import User from '../../assets/images/index.png'
 
 function Navbar() {
@@ -45,10 +46,14 @@ function Navbar() {
             setShowDiv2(false)
         } else {
             setShowDiv2(current => !current)
-            setShowDiv1(false)
+            setShowDiv1(false)  
         }
         
     }
+    // function handleScroll() {
+    //     const section = document.getElementById('about');
+    //     section?.scrollIntoView({ behavior: 'smooth' });
+    // }
     
     return (
         <header>
@@ -62,9 +67,7 @@ function Navbar() {
                     <nav>
                         <ul className={`menu ${ showMenu ? 'show' : '' }`}>
 
-                            <li>
-                                <a href="#"> Home </a>
-                            </li>
+                            <li className='nav-link'> <Link to="/"> Home </Link> </li>
 
                             <li>
                                 <button className='nav-btn' onClick={() => handleClick('div1')}>
@@ -72,11 +75,11 @@ function Navbar() {
                                     <i className='bx bx-chevron-down'></i>
                                 </button>
                                 <div id='dropdown1' className={`dropdown ${showDiv1 ? 'active' : ''} `}>
-                                    <ul role='menu'className='drop-link'>
-                                        <li><a href="#">All News</a></li>
-                                        <li><a href="#">Title Awards</a></li>
-                                        <li><a href="#">Events</a></li>
-                                        <li><a href="#">WaifuNet Expo</a></li>
+                                    <ul role='menu'>
+                                        <li className='drop-link'><a href="#">All News</a></li>
+                                        <li className='drop-link'><a href="#">Title Awards</a></li>
+                                        <li className='drop-link'><a href="#">Events</a></li>
+                                        <li className='drop-link'><a href="#">WaifuNet Expo</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -87,25 +90,24 @@ function Navbar() {
                                     <i className='bx bx-chevron-down'></i>
                                 </button>
                                 <div id='dropdown2' className={`dropdown ${showDiv2 ? 'active' : ''} `}>
-                                    <ul role='menu' className='drop-link'>
-                                        <li><a href="#">Newest</a></li>
-                                        <li><a href="#">Trending</a></li>
-                                        <li><a href="#">Top Tier</a></li>
-                                        <li><a href="#">Award Winning</a></li>
+                                    <ul role='menu'>
+                                        <li className='drop-link'><Link to="#">Newest</Link></li>
+                                        <li className='drop-link'><Link to="#">Trending</Link></li>
+                                        <li className='drop-link'><Link to="#">Top Tier</Link></li>
+                                        <li className='drop-link'><Link to="#">Award Winning</Link></li>
                                     </ul>
-                                    <ul className='drop-link'>
-                                        <li> <span className='drop-subtitle'> Genres </span> </li>
-                                        <li><a href="#">Isekai</a></li>
-                                        <li><a href="#">School Life</a></li>
-                                        <li><a href="#">Romance</a></li>
-                                        <li><a href="#"> More... </a></li>
+                                    <ul role='menu'>
+                                        <li className='drop-link'><Link to="#">Isekai</Link></li>
+                                        <li className='drop-link'><Link to="#">School Life</Link></li>
+                                        <li className='drop-link'><Link to="#">Romance</Link></li>
+                                        <li className='drop-link'><Link to="/genres"> More... </Link></li>
                                     </ul>
                                 </div>
                                 
                             </li>
 
-                            <li> <a href="#"> About </a> </li>
-                            <li> <a href="#"> Contact </a> </li>
+                            <li className='nav-link'> <Link to="/sponsors"> Sponsors </Link> </li>
+                            <li className='nav-link'> <a href="#"> Contact </a> </li>
 
                         </ul>
                     </nav>
@@ -121,7 +123,6 @@ function Navbar() {
 
 
                         <button className='sign-btn'> Sign Up </button>
-                        <button className='sign-btn'> Sign In </button>
 {/* 
                         <a href="#">
                             <img src={User} alt="user-pfp" width='60' height='60' />

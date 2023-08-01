@@ -14,10 +14,12 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.2",
+    "easybase-react": "^2.2.13",
     "markdown": "^0.5.0",
     "markdown-to-jsx": "^5.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.13.0"
   },
   "devDependencies": {
     "@types/markdown-to-jsx": "^7.0.1",

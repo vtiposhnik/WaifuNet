@@ -26,18 +26,16 @@ img {
 
 .home-img {
     overflow-x: hidden;
-
     min-width: 43rem;}
     @media (max-width: 1140px) {
         .home-img {
         position: absolute;
-        z-index: -1;
         max-width: 43rem;
         left: calc(60%);
-        filter: blur(2px);
+        z-index: -1;
         }
         .home-text {
-            opacity: 80%;
+            opacity: 90%;
         }
     }
 
@@ -47,7 +45,6 @@ img {
     /* margin-top: 3em; */
     gap: 1em;
     padding: 4em;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,9 +77,38 @@ img {
     transition: all 0.2s ease-in-out;
     border-radius: 5px;
     padding: 0.5em;
-    color: #000;}
+    font-weight: 800;
+    color: #003eb9;}
     .join-btn:hover {
-        transform: translate(-4px, -4px);
-        background-color: blue;
+        background-color: rgb(39, 39, 255);
+        color: #fff;
+    }
+
+@media (max-width: 1140px) {
+    .scroll-box, .scroll-btn {
+        display: none;
+    }
+}
+.scroll-box {
+    position: relative;
+    background-color: var(--primary-color);
+    box-shadow: 0px 8px 5px 4px var(--primary-color),
+                0px -10px 10px 6px var(--primary-color),
+                0px -12px 15px 10px #ffffff25;
+    height: 4rem;
+    width: 100vw;
+    bottom: 0;
+}
+.scroll-btn {
+    transform: rotate(90deg);
+    padding: 0;
+    position: absolute;
+    left: calc(50% - 20px);
+    top: -35px;
+    transition: all 0.2s ease-in-out;
+    color: rgb(151, 149, 149);
+    font-size: var(--fsz-welcome);}
+    .scroll-btn:hover {
+        top: -37px;
         color: #fff;
     }

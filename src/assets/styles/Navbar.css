@@ -1,3 +1,6 @@
+:root {
+    --btn-off: 
+}
 header {
     margin: 0;
     padding:  1.2em 1.5em;
@@ -21,7 +24,7 @@ button {
     justify-content: space-between;
     gap: 1em;
 }
-@media (max-width: 1010px) {
+@media (max-width: 1080px) {
     .container {
         justify-content: center;
     }
@@ -44,6 +47,12 @@ button {
     display: flex;
     align-items: center;
     padding: 0;
+    border-radius: 6px;
+}
+.nav-link:hover,
+.nav-btn:hover {
+    color: var(--primary-color);
+    transition: color 0.2s ease-in-out;
 }
 
 .menu {
@@ -59,27 +68,34 @@ button {
     border-radius: 10px;
     box-shadow: var(--shadow);
     line-height: 2.5em;
-    font-size: var(--fsz-large);
+    font-size: var(--fsz-normal);
     background-color: white;
+    padding: 0.3em 1em;
 
     transform: scale(0.85) translateX(-5px);
     transition: 0.1s ease-in-out;
     visibility: hidden;
     opacity: 0;
-    z-index: 1;
 }
 .dropdown.active {
     visibility: visible;
     opacity: 1;
     transform: scale(1) translateX(5px);
+    z-index: 10;
 }
 
 .dropdown ul {
-    padding: 1em;
+    padding: 1em 0.5em;
     flex-wrap: wrap;
 }
 #dropdown2 ul:first-child {
     border-right: var(--bd);
+}
+.drop-link a {
+    color: var(--btn-off);
+}
+.drop-link a:hover {
+    color: #000;
 }
 
 .right-box {
@@ -126,6 +142,7 @@ button {
     .menu.show, 
     .dropdown.active {
         display: block;
+        z-index: 10;
     }
 
     .container {
@@ -140,17 +157,19 @@ button {
     }
 
     .menu {
-        min-width: 100dvw;
+        min-width: 100vw;
         display: none;
         position: absolute;
         left: 0;
         top: 100px;
-        padding-left: 1em;
+        box-shadow: 0px -10px 10px 10px #fff, 0px 5px 5px #fff;
+        padding: 1em;
         overflow-x: hidden;
-        font-size: var(--fsz-larger);
+        font-size: var(--fsz-large);
+        background-color: #fff;
     }
     .nav-btn {
-        font-size: var(--fsz-larger);
+        font-size: var(--fsz-large);
         min-width: 100%;
         justify-content: space-between;
 

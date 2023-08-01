@@ -1,16 +1,13 @@
-import Navbar from "../../components/Navbar/Navbar";
 import '../../assets/styles/style.css'
 import '../../assets/styles/home.css'
-import BgImg from '../../assets/images/sample-bg/background.jpg'
+
 import Home3 from '../../assets/images/home2.png'
-// import Clipart from '../../assets/images/hero-img.png'
 
 
 export default function Home() {
 
     return (
         <>
-        <Navbar />
         <section id="home">
 
             <div className="bg-box">
@@ -26,6 +23,7 @@ export default function Home() {
                     </div>
                     <div className="home-img"> <img src={Home3} alt="home-girl" /> </div>
             </div>
+                    {/* <div className="scroll-box"> <button className="scroll-btn" onClick={handleScroll}> &#10097; </button> </div> */}
 
         </section>
         </>
