@@ -4,7 +4,7 @@ Anime themed responsive website in React with Typescript
 [Report on project.docx](https://github.com/vtiposhnik/WaifuNet/files/13163071/Report.on.project.docx)
 
 
-![home-page-img](https://github.com/vtiposhnik/WaifuNet/assets/99889690/8fdd353b-cabd-4ba8-91f9-a5940a64f0a9)
+![home](https://github.com/vtiposhnik/WaifuNet/assets/99889690/74ada6ff-6d62-4d68-a9a4-4f670c767a5a)
 ***
-![sponsors-page-img](https://github.com/vtiposhnik/WaifuNet/assets/99889690/4208c08b-f7d5-4ecf-ac3e-efff8f49b607)
+![sponsors](https://github.com/vtiposhnik/WaifuNet/assets/99889690/50687de3-0680-49e0-9c2d-c57891770e3a)
 
